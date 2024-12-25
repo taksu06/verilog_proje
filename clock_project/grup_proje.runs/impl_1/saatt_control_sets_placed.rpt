@@ -1,0 +1,105 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Aug 12 13:31:03 2024
+| Host         : tugberk running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file saatt_control_sets_placed.rpt
+| Design       : saatt
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    34 |
+| Unused register locations in slices containing registers |   120 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            3 |
+|      2 |            2 |
+|      4 |           14 |
+|      5 |            1 |
+|      6 |            1 |
+|      7 |            1 |
+|      8 |            3 |
+|    16+ |            9 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              45 |           26 |
+| No           | No                    | Yes                    |              40 |           17 |
+| No           | Yes                   | No                     |              66 |           18 |
+| Yes          | No                    | No                     |              51 |           24 |
+| Yes          | No                    | Yes                    |              22 |            9 |
+| Yes          | Yes                   | No                     |             112 |           31 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+-------------------------------+----------------------------+------------------+----------------+
+|         Clock Signal        |         Enable Signal         |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
++-----------------------------+-------------------------------+----------------------------+------------------+----------------+
+|  db1/debounced_button_reg_0 |                               | db1/stopped_reg_C          |                1 |              1 |
+|  clk_IBUF_BUFG              | UTX/tx1_out                   | rst_IBUF                   |                1 |              1 |
+|  db1/stopped_reg_C          |                               | db1/debounced_button_reg_0 |                1 |              1 |
+|  clk3[0]                    |                               | db1/stopped_reg_C          |                2 |              2 |
+|  clk3[0]                    |                               | db1/debounced_button_reg_0 |                2 |              2 |
+|  sec0_reg[3]_i_2_n_0        | month1[3]_i_1_n_0             | month0[3]_i_1_n_0          |                2 |              4 |
+|  sec0_reg[3]_i_2_n_0        | year1[3]_i_1_n_0              |                            |                1 |              4 |
+|  sec0_reg[3]_i_2_n_0        | year2[3]_i_1_n_0              |                            |                1 |              4 |
+|  clk_IBUF_BUFG              | UTX/bit_index[3]_i_1_n_0      | rst_IBUF                   |                2 |              4 |
+|  sec0_reg[3]_i_2_n_0        | year3[3]_i_1_n_0              |                            |                1 |              4 |
+|  sec0_reg[3]_i_2_n_0        | year0[3]_i_1_n_0              |                            |                2 |              4 |
+|  sec0_reg[3]_i_2_n_0        | db3/E[0]                      |                            |                3 |              4 |
+|  sec0_reg[3]_i_2_n_0        | db3/debounced_button_reg_1[0] |                            |                2 |              4 |
+|  sec0_reg[3]_i_2_n_0        | db4/E[0]                      |                            |                2 |              4 |
+|  sec0_reg[3]_i_2_n_0        | db4/debounced_button_reg_1[0] |                            |                1 |              4 |
+|  clk_IBUF_BUFG              | URX/bit_index                 | rst_IBUF                   |                1 |              4 |
+|  sec0_reg[3]_i_2_n_0        | day0[3]_i_2_n_0               | day0                       |                3 |              4 |
+|  sec0_reg[3]_i_2_n_0        | day1[3]_i_1_n_0               |                            |                1 |              4 |
+|  sec0_reg[3]_i_2_n_0        | month0[3]_i_2_n_0             | month0[3]_i_1_n_0          |                1 |              4 |
+|  clk_IBUF_BUFG              | db2/E[0]                      | rst_IBUF                   |                2 |              5 |
+|  clk3[0]                    |                               |                            |                3 |              6 |
+|  clk3[0]                    | ss_out[6]_i_1_n_0             |                            |                4 |              7 |
+|  sec0_reg[3]_i_2_n_0        |                               |                            |                4 |              8 |
+|  clk_IBUF_BUFG              | URX/data_out[7]_i_1_n_0       | rst_IBUF                   |                3 |              8 |
+|  clk_IBUF_BUFG              | URX/E[0]                      |                            |                6 |              8 |
+|  clk_IBUF_BUFG              | db1/counter[0]_i_2_n_0        | db1/counter                |                5 |             20 |
+|  clk_IBUF_BUFG              | db2/counter[0]_i_2__0_n_0     | db2/counter_0              |                5 |             20 |
+|  clk_IBUF_BUFG              | db3/counter[0]_i_2__1_n_0     | db3/counter_0              |                5 |             20 |
+|  clk_IBUF_BUFG              | db4/counter[0]_i_2__2_n_0     | db4/counter_0              |                5 |             20 |
+|  clk_IBUF_BUFG              | db5/counter[0]_i_2__3_n_0     | db5/counter_0              |                5 |             20 |
+|  clk_IBUF_BUFG              |                               |                            |               19 |             31 |
+|  clk_IBUF_BUFG              |                               | clear                      |                8 |             32 |
+|  clk_IBUF_BUFG              |                               | count2[0]_i_1_n_0          |                8 |             32 |
+|  clk_IBUF_BUFG              |                               | rst_IBUF                   |               13 |             36 |
++-----------------------------+-------------------------------+----------------------------+------------------+----------------+
+
+
